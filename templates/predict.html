@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main {
+            padding: 30px;
+            background: #fff;
+            border: #ccc 1px solid;
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        select, input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Car Prediction Form</h1>
+        </div>
+    </header>
+    <div class="container main">
+        <form action="/check" method="POST">
+            <label for="make">Make:</label>
+            <select id="make" name="make">
+                <option value="Toyota">Toyota</option>
+                <option value="Suzuki">Suzuki</option>
+                <option value="Daihatsu">Daihatsu</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="KIA">KIA</option>
+                <option value="Changan">Changan</option>
+                <option value="FAW">FAW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Chevrolet">Chevrolet</option>
+            </select>
+            
+            <label for="model">Model:</label>
+            <select id="model" name="model">
+                <option value="Passo">Passo</option>
+                <option value="Ravi">Ravi</option>
+                <option value="Bolan">Bolan</option>
+                <!-- Add other models here -->
+                <option value="ISIS">ISIS</option>
+            </select>
+            
+            <label for="year">Year:</label>
+            <select id="year" name="year">
+                <option value="2021">2021</option>
+                <option value="2018">2018</option>
+                <option value="2015">2015</option>
+                <!-- Add other years here -->
+                <option value="2024">2024</option>
+            </select>
+            
+            <label for="kms">KM's Driven:</label>
+            <input type="number" id="kms" name="kms" min="0" step="1" required>
+            
+            <label for="fuel">Fuel:</label>
+            <select id="fuel" name="fuel">
+                <option value="Petrol">Petrol</option>
+                <option value="CNG">CNG</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Diesel">Diesel</option>
+            </select>
+            
+            <label for="registration_city">Registration City:</label>
+            <select id="registration_city" name="registration_city">
+                <option value="Unregistered">Unregistered</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Lahore">Lahore</option>
+                <!-- Add other cities here -->
+                <option value="Nawabshah">Nawabshah</option>
+            </select>
+            
+            <label for="car_documents">Car Documents:</label>
+            <select id="car_documents" name="car_documents">
+                <option value="Original">Original</option>
+                <option value="Duplicate">Duplicate</option>
+            </select>
+            
+            <label for="assembly">Assembly:</label>
+            <select id="assembly" name="assembly">
+                <option value="Imported">Imported</option>
+                <option value="Local">Local</option>
+            </select>
+            
+            <label for="transmission">Transmission:</label>
+            <select id="transmission" name="transmission">
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+            </select>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
